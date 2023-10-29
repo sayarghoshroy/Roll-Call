@@ -1,5 +1,6 @@
 # Read and Process Raw Data from a `docx` file
 
+# !pip install python-docx
 from docx import Document
 document = Document('./sample/input.docx')
 
@@ -32,7 +33,7 @@ count = 1
 for unit in all_names:
   if count > limit:
     break
-  print(str(count) +". " +str(unit))
+  print(str(count) + '. ' +str(unit))
   count += 1
 
 # Create Output Doc
@@ -50,4 +51,4 @@ for index, elem in enumerate(all_names):
 out.add_paragraph(str(output_string))
 out.save('./sample/output.docx')
 
-# Thank You
+# Done
